@@ -1,0 +1,100 @@
+<mujoco model="so101_valve_scene">
+
+    <include file="so101_new_calib.xml"/>
+
+    <compiler angle="radian" coordinate="local" meshdir="assets"/>
+    <option timestep="0.002" gravity="0 0 -9.81"/>
+
+    <default>
+        <geom friction="2 0.005 0.0001"
+              condim="4"/>
+    </default>
+    <visual>
+        <global offwidth="640" offheight="480"/>
+    </visual>
+
+    <asset>
+        <mesh name="valve_base_mesh"
+              file="../Lever Action Valve_17/meshes/Joint1.STL"/>
+        <mesh name="valve_connector_mesh"
+              file="../Lever Action Valve_17/meshes/Joint2.STL"/>
+        <mesh name="valve_handle_mesh"
+              file="../Lever Action Valve_17/meshes/joint3.STL"/>
+    </asset>
+
+    <worldbody>
+
+        <light pos="0 0 3.5" dir="0 0 -1" directional="true"/>
+
+        <geom name="floor"
+              type="plane"
+              size="5 5 0.1"
+              rgba="0.8 0.8 0.8 1"/>
+
+        <body name="valve_base"
+              pos="0.34 -0.0208110485691569 0.2248507178435103"
+              euler="0 0 3.14159265358979">
+
+            <inertial pos="-0.0612969161199989 -0.0208110471960751 -0.00368566958444174"
+                      mass="0.509220112347729"
+                      fullinertia="0.0130737320923455 0.0130795076292887 0.000230266745105746 9.45756252899026E-11 -1.48811108482286E-05 -4.67801496593558E-11"/>
+
+            <geom name="valve_base_geom"
+                  type="mesh"
+                  mesh="valve_base_mesh"
+                  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+
+            <body name="valve_connector"
+                  pos="0 -0.0208110485691569 0.0701492821564897"
+                  euler="1.5707963267949 0 0">
+
+                <inertial pos="-0.0226040077206507 -1.2490009027033E-16 -2.08166817117217E-17"
+                          mass="0.0292003183169538"
+                          fullinertia="2.66087900663241E-06 7.65960849851593E-06 7.65960849851593E-06 -1.82047389576919E-20 9.71278719685466E-39 -7.56029715497403E-39"/>
+
+                <geom name="valve_connector_geom"
+                      type="mesh"
+                      mesh="valve_connector_mesh"
+                      rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+
+                <body name="lever"
+                      pos="0 0 0"
+                      euler="-1.5708 0 0">
+
+                    <inertial pos="-0.0098266311138373 -4.78783679369599E-16 0.0394973851429148"
+                              mass="0.0244780463145089"
+                              fullinertia="4.8921091480238E-05 4.85761024631166E-05 2.65296409921423E-06 1.09320733411926E-20 -7.13368201305606E-07 4.78440318615536E-19"/>
+
+                    <joint name="valve_hinge"
+                           type="hinge"
+                           axis="-1 0 0"
+                           range="0 1.5708"
+                           damping="0.3"
+                           limited="true"/>
+
+                    <geom name="lever_geom"
+                          type="mesh"
+                          mesh="valve_handle_mesh"
+                          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
+                          friction="3 0.01 0.001"
+                          condim="4"/>
+
+                    <site name="lever_grasp"
+                          pos="0 0 0.055"
+                          size="0.010"
+                          rgba="0 0 1 1"/>
+
+                    <site name="lever_tip"
+                          pos="0 0 0.110"
+                          size="0.012"
+                          rgba="0 1 0 1"/>
+
+                </body>
+
+            </body>
+
+        </body>
+
+    </worldbody>
+
+</mujoco>

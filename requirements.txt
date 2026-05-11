@@ -1,0 +1,8 @@
+gymnasium
+imageio
+matplotlib
+mujoco
+numpy
+pandas
+stable-baselines3
+torch

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+.venv/
+venv/
+env/
+
+.DS_Store
+Thumbs.db
+
+outputs/logs/
+outputs/figures/
+outputs/evaluation/
+outputs/recordings/
+sweep_outputs/
+
+*.mp4
