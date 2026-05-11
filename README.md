@@ -93,7 +93,7 @@ This opens `Scene.xml` using MuJoCo's passive viewer.
 
 ![MuJoCo scene preview](docs/images/scene-preview.png)
 
-> Add a screenshot of the loaded MuJoCo scene at `docs/images/scene-preview.png` before publishing the repository.
+> The loaded scene should be like this.
 
 ### 2. Train Both SAC Agents
 
