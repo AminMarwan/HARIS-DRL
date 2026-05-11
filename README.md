@@ -1,6 +1,6 @@
 ﻿# DRL Valve Manipulation
 
-This directory contains the Deep Reinforcement Learning (DRL) component of the project. It provides a MuJoCo simulation environment and a two-stage Soft Actor-Critic (SAC) training pipeline for controlling a SO-101 robotic arm to interact with a lever-action valve.
+This directory contains the Deep Reinforcement Learning (DRL) component of the HARIS project. It provides a MuJoCo simulation environment and a two-stage Soft Actor-Critic (SAC) training pipeline for controlling a SO-101 robotic arm to interact with a lever-action valve.
 
 The task is divided into two policies:
 
