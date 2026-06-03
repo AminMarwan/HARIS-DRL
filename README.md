@@ -1,4 +1,24 @@
-﻿# DRL Valve Manipulation
+# HARIS Project – Deep Reinforcement Learning Module
+
+> **This repository contains the Deep Reinforcement Learning (DRL) subsystem of the HARIS project.**
+>
+> **Main HARIS Repository:** https://github.com/sdp2025f/HARIS
+>
+> For the complete project, including system integration, robotics hardware, software modules, documentation, reports, and team deliverables, please visit the main HARIS repository.
+
+## About HARIS
+
+HARIS is a multidisciplinary robotics project developed as part of the Senior Design Project. The project integrates multiple subsystems to enable autonomous robotic operation and task execution.
+
+This repository contains only the **Deep Reinforcement Learning (DRL) Valve Manipulation Module**, responsible for training reinforcement learning agents to control a SO-101 robotic arm within a MuJoCo simulation environment.
+
+For the complete system architecture and all project components, please refer to:
+
+**https://github.com/sdp2025f/HARIS**
+
+---
+
+# DRL Valve Manipulation
 
 This directory contains the Deep Reinforcement Learning (DRL) component of the HARIS project. It provides a MuJoCo simulation environment and a two-stage Soft Actor-Critic (SAC) training pipeline for controlling a SO-101 robotic arm to interact with a lever-action valve.
 
@@ -357,7 +377,26 @@ python parameter_sweep.py --timesteps-scale 0.1
 - Best and checkpoint models are saved through `callbacks.py`.
 - Generated plots can be recreated from logs using `make_figures.py`.
 
+## Relation to the HARIS Project
+
+This repository is maintained as a subsystem of the HARIS project and focuses exclusively on the Deep Reinforcement Learning component.
+
+Additional project components, system integration details, documentation, reports, and final deliverables are available in the main HARIS repository:
+
+**https://github.com/sdp2025f/HARIS**
+
 ## License and Citation
 
-If this repository is used in a report, presentation, or publication, cite the project and include any required acknowledgements for MuJoCo, Stable-Baselines3, Gymnasium, and the SO-101/valve assets used by the simulation.
+If this repository is used in a report, presentation, publication, or academic work, please cite both:
 
+1. The HARIS Project
+2. This DRL Valve Manipulation Module
+
+Please also acknowledge the use of:
+
+- MuJoCo
+- Stable-Baselines3
+- Gymnasium
+- PyTorch
+- SO-101 robot assets
+- Valve simulation assets
