@@ -2,19 +2,45 @@
 
 > **This repository contains the Deep Reinforcement Learning (DRL) subsystem of the HARIS project.**
 >
-> **Main HARIS Repository:** https://github.com/sdp2025f/HARIS
+> While the main team repository is currently private, several project subsystems are publicly available through their respective repositories.
 >
-> For the complete project, including system integration, robotics hardware, software modules, documentation, reports, and team deliverables, please visit the main HARIS repository.
+> Related repositories:
+>
+> - **Computer Vision (Valve Detection):** https://github.com/Moustafa-2003/yolo11-valve-detection
+> - **Monitoring Dashboard:** https://github.com/iAhmadAbdalla/HARIS
 
 ## About HARIS
 
-HARIS is a multidisciplinary robotics project developed as part of the Senior Design Project. The project integrates multiple subsystems to enable autonomous robotic operation and task execution.
+HARIS is a multidisciplinary robotics project developed as part of the Senior Design Project. The project integrates multiple subsystems to enable autonomous robotic operation, valve detection, monitoring, and manipulation.
 
-This repository contains only the **Deep Reinforcement Learning (DRL) Valve Manipulation Module**, responsible for training reinforcement learning agents to control a SO-101 robotic arm within a MuJoCo simulation environment.
+This repository contains the **Deep Reinforcement Learning (DRL) Valve Manipulation Module**, responsible for training reinforcement learning agents to control a SO-101 robotic arm within a MuJoCo simulation environment.
 
-For the complete system architecture and all project components, please refer to:
+Other publicly available HARIS components include:
 
-**https://github.com/sdp2025f/HARIS**
+### Computer Vision Module
+
+Repository:
+
+https://github.com/Moustafa-2003/yolo11-valve-detection
+
+Responsible for:
+
+- Valve detection and localization
+- Real-time computer vision processing
+- YOLO-based object detection pipeline
+
+### Monitoring Dashboard
+
+Repository:
+
+https://github.com/iAhmadAbdalla/HARIS
+
+Responsible for:
+
+- System monitoring
+- User interface and dashboard visualization
+- Operational status reporting
+- System integration support
 
 ---
 
@@ -381,16 +407,50 @@ python parameter_sweep.py --timesteps-scale 0.1
 
 This repository is maintained as a subsystem of the HARIS project and focuses exclusively on the Deep Reinforcement Learning component.
 
-Additional project components, system integration details, documentation, reports, and final deliverables are available in the main HARIS repository:
+The complete HARIS system consists of multiple integrated subsystems developed by different team members.
 
-**https://github.com/sdp2025f/HARIS**
+### Deep Reinforcement Learning (This Repository)
+
+Responsible for:
+
+- Robotic arm control
+- Valve manipulation
+- Soft Actor-Critic (SAC) training
+- MuJoCo simulation environment
+
+### Computer Vision Module
+
+Repository:
+
+https://github.com/Moustafa-2003/yolo11-valve-detection
+
+Responsible for:
+
+- Valve detection
+- Object localization
+- Vision-based perception
+
+### Monitoring Dashboard
+
+Repository:
+
+https://github.com/iAhmadAbdalla/HARIS
+
+Responsible for:
+
+- Monitoring and visualization
+- Dashboard interface
+- System status tracking
+
+Together, these components form the HARIS project architecture.
 
 ## License and Citation
 
-If this repository is used in a report, presentation, publication, or academic work, please cite both:
+If this repository is used in a report, presentation, publication, or academic work, please cite:
 
 1. The HARIS Project
-2. This DRL Valve Manipulation Module
+2. The DRL Valve Manipulation Module
+3. Any additional HARIS subsystem repositories used as part of the work
 
 Please also acknowledge the use of:
 
@@ -400,3 +460,8 @@ Please also acknowledge the use of:
 - PyTorch
 - SO-101 robot assets
 - Valve simulation assets
+
+Related HARIS repositories:
+
+- Computer Vision: https://github.com/Moustafa-2003/yolo11-valve-detection
+- Monitoring Dashboard: https://github.com/iAhmadAbdalla/HARIS
